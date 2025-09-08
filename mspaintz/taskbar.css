@@ -1,0 +1,136 @@
+@charset "UTF-8";
+@import url("var.css");
+
+#taskbar{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--color-window);
+    border-left: hidden;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    outline-style: solid;
+    outline-width: 2.5px;
+    outline-color: var(--color-window);
+}
+
+#taskbar, #taskbar >*{
+    z-index: 100;
+}
+
+#taskbar #start{
+    height: var(--tab-height);
+    max-height: var(--tab-height);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    margin: 0.2rem;
+    font-weight: bold;
+    letter-spacing: normal;
+    flex-wrap: nowrap;
+    overflow: clip;
+}
+
+.divider{
+    position: relative;
+    width: calc(var(--border-width) + 1px);
+    border-top: hidden;
+    border-bottom: hidden;
+}
+
+#startdivider{
+    height: calc(var(--tab-height) + 1px);
+    margin: 0.1rem 0.1rem 0.1rem 0.05rem;
+    top: 1px;
+}
+
+#enddivider{
+    height: var(--tab-height);
+}
+
+#startnub{
+    position: relative;
+    height: calc(var(--tab-height) - 6px);
+    width: calc(var(--border-width) + 3px);
+    margin: 0.1rem 0.2rem 0.1rem 0.05rem;
+    top: 1px;
+}
+
+.unfocus{
+    height: var(--tab-height);
+    width: 11rem;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    overflow: clip;
+    justify-content: left;
+    align-items: center;
+    margin: 0.2rem;
+    padding: 0.3rem;
+    font-size: 0.85rem;
+    font-weight: normal;
+    border-style: solid;
+    border-width:var(--border-width);
+    border-color: var(--color-border);
+    box-shadow: var(--shadow);
+}
+
+.focus{
+    height: var(--tab-height);
+    width: 11rem;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    overflow: clip;
+    justify-content: left;
+    align-items: center;
+    margin: 0.2rem;
+    padding: 0.3rem;
+    font-size: 0.80rem;
+    font-weight: bold;
+    border-style: solid;
+    border-width: var(--border-width);
+    border-color: var(--color-border-inline);
+    box-shadow: var(--shadow-inline), var(--shadow-inline-b);
+    background-color: white;
+    background-image: var(--checkerboard);
+    background-size: var(--checkerboard-size);
+    background-position: var(--checkerboard-pos);
+}
+
+#divbreak{
+    display: flex;
+    flex-grow: 1;
+}
+
+#tray{
+    height: var(--tab-height);
+    width: 7rem;
+    border-style: solid;
+    border-width: var(--border-width);
+    border-color: var(--color-border-rev);
+    display: inline-flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    font-size: 0.85rem;
+    padding: 0.3rem;
+    margin: 0.2rem;
+}
+
+#tray span{
+    position: relative;
+    left: 10px;
+}
+
+.trayicon{
+    position: relative;
+    width: 23px;
+    height: 23px;
+    margin-right: 2px;
+    right: 4px;
+}
+
