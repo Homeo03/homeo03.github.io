@@ -1,0 +1,217 @@
+@charset "UTF-8";
+:root{
+    --color-bg: #008080;
+    --color-window: #c0c0c0;
+    --color-border-l: #fefefe;
+    --color-border-d: #676767;
+    --color-border-s: #212121;
+    --color-header-f: #000080;
+    --color-border: 
+        var(--color-border-l) 
+        var(--color-border-d) 
+        var(--color-border-d) 
+        var(--color-border-l);
+    --color-border-inline: 
+        var(--color-border-s) 
+        var(--color-window) 
+        var(--color-window) 
+        var(--color-border-s);
+    --color-border-rev: 
+        var(--color-border-d) 
+        var(--color-border-l) 
+        var(--color-border-l) 
+        var(--color-border-d);
+    --color-window-border: 
+        var(--color-window)
+        var(--color-border-d)
+        var(--color-border-d)
+        var(--color-window);
+    --border-width: 2px;
+    --task-height: 6%;
+    --tab-height: 80%;
+    --tab-width-max: 14%;
+    --tab-width-min: 12%;
+    --shadow-width: 0.80px;
+    --color-gradient: #ced3d6;
+    --color-gradient2: #ccc;
+    --shadow: 
+        var(--shadow-width) 
+        var(--shadow-width) 
+        0px 
+        var(--shadow-width) 
+        var(--color-border-s);
+    --shadow-inline: 
+        var(--shadow-width) 
+        var(--shadow-width) 
+        0px 
+        var(--shadow-width) 
+        var(--color-border-d) inset;
+    --shadow-inline-b: 
+        var(--shadow-width) 
+        var(--shadow-width) 
+        0px 
+        var(--shadow-width) 
+        var(--color-border-l);
+    --shadow-pt: 
+        var(--shadow-width) 
+        var(--shadow-width) 
+        0px 
+        var(--shadow-width) 
+        var(--color-border-d) inset;
+    --shadow-window: 
+        var(--shadow-width)
+        var(--shadow-width)
+        0px
+        var(--shadow-width)
+        var(--color-border-l) inset;
+    --checkerboard: 
+        linear-gradient(45deg, var(--color-gradient) 25%, transparent 25%), 
+        linear-gradient(-45deg, var(--color-gradient) 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, var(--color-gradient2) 75%),
+        linear-gradient(-45deg, transparent 75%, var(--color-gradient2) 75%);
+    --checkerboard-size: 3px 3px;
+    --checkerboard-pos: 0 0, 0 1.5px, 1.5px -1.5px, -1.5px 0px;
+}
+
+@font-face {
+    font-family: w95font;
+    src: url("fonts/w95font.woff2") format("woff2"), 
+        url("fonts/w95font.woff") format("woff"), 
+        url("fonts/W95font.otf") format("otf");
+    font-weight: normal; 
+}
+
+@font-face {
+    font-family: w95font;
+    src: url("fonts/w95font-bold.woff2") format("woff2"), 
+        url("fonts/w95font-bold.woff") format("woff"), 
+        url("fonts/W95font-Bold.otf") format("otf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: fixedsys;
+    src: url(fonts/fsex300-webfont.woff) format("woff");
+    font-weight: normal;
+}
+
+html{
+    font-family: "w95font";
+    font-size: 20px;
+    overflow: hidden;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    outline: none;
+}
+
+.icon{
+    width: 23px;
+    height: 23px;
+    margin-right: 4px;
+}
+
+.border-reg{
+    border-style: solid;
+    border-width: var(--border-width);
+    border-color: var(--color-border);
+    box-shadow: var(--shadow);
+}
+
+.border-pressed{
+    border-style: solid;
+    border-width: var(--border-width);
+    border-color: var(--color-border-inline);
+    box-shadow: var(--shadow-inline), var(--shadow-inline-b);
+}
+
+.shadow{
+    box-shadow: var(--shadow);
+}
+
+.shadow-inline{
+    box-shadow: var(--shadow-inline), var(--shadow-inline-b);
+}
+
+.border{
+    border-style: solid;
+    border-width:var(--border-width);
+    border-color: var(--color-border);
+}
+
+.border-inline{
+    border-style: solid;
+    border-width: var(--border-width);
+    border-color: var(--color-border-inline);
+}
+
+.border-rev{
+    border-style: solid;
+    border-width: var(--border-width);
+    border-color: var(--color-border-rev);
+}
+
+.border-window{
+    border-style: solid;
+    border-width: var(--border-width);
+    border-color: var(--color-window-border);
+    box-shadow: var(--shadow), var(--shadow-window);
+}
+
+.break{
+    display: flex;
+    flex-grow: 1;
+}
+
+::-webkit-scrollbar{
+    width: 22px;
+    background-color: var(--color-window);
+}
+
+::-webkit-scrollbar-button:vertical:decrement{
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-window);
+    border-style: solid;
+    border-width:var(--border-width);
+    border-color: var(--color-window) var(--color-border-d) var(--color-border-d) var(--color-window);
+    background: url(assets/scrollarrow.png) no-repeat center;
+    background-size: 10px 6.25px;
+    box-shadow: var(--shadow-window);
+}
+
+::-webkit-scrollbar-button:vertical:increment{
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-window);
+    border-style: solid;
+    border-width:var(--border-width);
+    border-color: var(--color-window) var(--color-border-d) var(--color-border-d) var(--color-window);
+    background: url(assets/scrollarrowdown.png) no-repeat center;
+    background-size: 10px 6.25px;
+    box-shadow: var(--shadow-window);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--color-window);
+    border-style: solid;
+    border-width:var(--border-width);
+    border-color: var(--color-window) var(--color-border-d) var(--color-border-d) var(--color-window);
+    box-shadow: var(--shadow-window);
+}
+
+::-webkit-scrollbar-track{
+    background-color: white;
+    background-image: var(--checkerboard);
+    background-size: var(--checkerboard-size);
+    background-position: var(--checkerboard-pos);
+}
+
+::-webkit-scrollbar-corner{
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-window);
+}

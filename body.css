@@ -1,0 +1,44 @@
+@charset "UTF-8";
+@import url("var.css");
+body{
+    background-color: var(--color-bg);
+    overflow: hidden;
+}
+
+::selection{
+    color: #000000;
+}
+
+#apps{
+    display: inline-flex;
+    flex-direction: column;
+    margin: 0.1rem 0.5rem 0.5rem 0.4rem;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.app{
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.appicon{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    align-self: center;
+    margin: 0.15rem;
+}
+
+#paintapp{
+    position: relative;
+    left: 3px;
+}
