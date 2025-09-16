@@ -78,7 +78,7 @@
     box-shadow: var(--shadow);
 }
 
-.focus{
+.focus, .mouse-down{
     height: var(--tab-height);
     width: 11rem;
     display: inline-flex;
@@ -89,11 +89,23 @@
     margin: 0.2rem;
     padding: 0.3rem;
     font-size: 0.80rem;
-    font-weight: bold;
     border-style: solid;
     border-width: var(--border-width);
     border-color: var(--color-border-inline);
     box-shadow: var(--shadow-inline), var(--shadow-inline-b);
+}
+
+.mouse-down{
+    font-weight: normal;
+    background-color: var(--color-window);
+}
+
+#tab1, #tab2{
+    cursor: default;
+}
+
+.focus{
+    font-weight: bold;
     background-color: white;
     background-image: var(--checkerboard);
     background-size: var(--checkerboard-size);

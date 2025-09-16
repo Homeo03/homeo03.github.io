@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="windows.css" type="text/css">
         <style>
         </style>
+        <script src="taskbar.js"></script>
+        <script src="paint.js"></script>
     </head>
     <body>
         <header id="taskbar" class="border-reg">
@@ -35,11 +37,11 @@
                 <img class="trayicon" src="assets/volume.png" alt="volume">
                 <span id="time">12:00&nbsp;PM</span>
             </div>
-            <script src="script.js"></script>
+            <script src="time.js"></script>
         </header>
         <section id="windows">
             <div id="notepad" class="border-window">
-                <div id="header" class="unfocused-header">
+                <div id="header-n" class="unfocused-header">
                     <img class="header-icon" src="assets/notepadiconsmall.png" alt="notepadiconsmall">
                     <span>untitled&nbsp;<b style="font-size: small;">-</b>&nbsp;Notepad</span>
                     <div id="notepad-header-buttons">
@@ -92,7 +94,7 @@
             </div>
             <div id="paint" class="border-window">
                 <div id="paintmain">
-                    <div id="header" class="focused-header">
+                    <div id="header-p" class="focused-header">
                         <img class="header-icon" src="assets/paintlogo.png" alt="paintlogomall">
                         <span>untitled&nbsp;<b style="font-size: small;">-</b>&nbsp;Paint</span>
                         <div id="paint-header-buttons">
@@ -114,11 +116,11 @@
                         <div id="painttools">
                             <div class="pt-unfocus"><img class="pt-image" src="assets/painttool1.png"></div>
                             <div class="pt-unfocus"><img class="pt-image" src="assets/painttool2.png"></div>
-                            <div class="pt-focus"><img class="pt-image" src="assets/painttool3.png"></div>
+                            <div class="pt-unfocus"><img class="pt-image" src="assets/painttool3.png"></div>
                             <div class="pt-unfocus"><img class="pt-image" src="assets/painttool4.png"></div>
                             <div class="pt-unfocus"><img class="pt-image" src="assets/painttool5.png"></div>
                             <div class="pt-unfocus"><img class="pt-image" src="assets/painttool6.png"></div>
-                            <div class="pt-unfocus"><img class="pt-image" src="assets/painttool7.png"></div>
+                            <div class="pt-focus"><img class="pt-image" src="assets/painttool7.png"></div>
                             <div class="pt-unfocus"><img class="pt-image" src="assets/painttool8.png"></div>
                             <div class="pt-unfocus"><img class="pt-image" src="assets/painttool9.png"></div>
                             <div class="pt-unfocus"><img class="pt-image" src="assets/painttool10.png"></div>

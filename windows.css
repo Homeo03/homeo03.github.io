@@ -147,16 +147,23 @@
     height: 315px;
 }
 
-.pt-focus{
+.pt-mouse-down{
+    background-color: var(--color-window);
+}
+
+.pt-focus, .pt-mouse-down{
     border-style: solid;
     border-width: var(--border-width);
     border-color: var(--color-border-inline);
     box-shadow: var(--shadow-inline-b), var(--shadow-pt);
+    justify-content: center;
+}
+
+.pt-focus{
     background-color: white;
     background-image: var(--checkerboard);
     background-size: var(--checkerboard-size);
     background-position: var(--checkerboard-pos);
-    justify-content: center;
 }
 
 .pt-unfocus{
