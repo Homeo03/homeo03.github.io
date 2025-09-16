@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function(){
     tab1.addEventListener("mouseup", function(){focusWindow("t1");});
     tab2.addEventListener("mousedown", function(){mouseDown("t2");});
     tab2.addEventListener("mouseup", function(){focusWindow("t2");});
-    p.addEventListener("click", function(){focusWindow("t1")});
-    n.addEventListener("click", function(){focusWindow("t2")});
+    p.addEventListener("mousedown", function(){focusWindow("t1")});
+    n.addEventListener("mousedown", function(){focusWindow("t2")});
 
     function focus(a){
         let focusTab;

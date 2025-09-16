@@ -5,12 +5,16 @@ document.addEventListener("DOMContentLoaded", function(){
 
     ptButtons.forEach(function(currentIndex){
         currentIndex.addEventListener("mousedown", function(){
-            currentIndex.className = "pt-mouse-down";
+            if (currentIndex.getAttribute("class") != "pt-mouse-down" && currentIndex.getAttribute("class") != "pt-focus"){
+                currentIndex.className = "pt-mouse-down";
+            }
         });
         currentIndex.addEventListener("mouseup", function(){
-            const ptf = pt.querySelector(".pt-focus");
-            ptf.className = "pt-unfocus";
-            currentIndex.className = "pt-focus";
+            if (currentIndex.getAttribute("class") != "pt-focus"){
+                const ptf = pt.querySelector(".pt-focus");
+                ptf.className = "pt-unfocus";
+                currentIndex.className = "pt-focus";
+            }
         });
     });
 });
