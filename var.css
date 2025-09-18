@@ -26,12 +26,12 @@
         var(--color-border-d)
         var(--color-border-d)
         var(--color-window);
-    --border-width: 2px;
+    --border-width: 0.15vw;
     --task-height: 6%;
     --tab-height: 80%;
     --tab-width-max: 14%;
     --tab-width-min: 12%;
-    --shadow-width: 0.80px;
+    --shadow-width: 0.050vw;
     --color-gradient: #ced3d6;
     --color-gradient2: #ccc;
     --shadow: 
@@ -106,6 +106,7 @@ html{
 *::after{
     box-sizing: border-box;
     outline: none;
+    -webkit-user-drag: none;
 }
 
 .icon{

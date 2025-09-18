@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, intital-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>MSPaintz</title>
         <meta name="description" content="MSPaintz">
         <link rel="icon" href="assets/paintlogo.png" type="image/x-icon">
@@ -11,22 +11,39 @@
         <link rel="stylesheet" href="windows.css" type="text/css">
         <style>
         </style>
-        <script src="taskbar.js"></script>
+        <script src="loading.js"></script>
+        <script src="buttons.js"></script>
         <script src="paint.js"></script>
     </head>
     <body>
+        <div id="startmenu" class="border-window">
+                <div id="startmenulogo"></div>
+                <div id="startmenubuttons">
+                    <div id="smb1" class="smb"><img class="sm-icons" src="assets/sm-icon1.png"><span class="smbt"><u>P</u>rograms</span></div>
+                    <div id="smb2" class="smb"><img class="sm-icons" src="assets/sm-icon2.png"><span class="smbt">F<u>a</u>vorites</span></div>
+                    <div id="smb3" class="smb"><img class="sm-icons" src="assets/sm-icon3.png"><span class="smbt"><u>D</u>ocuments</span></div>
+                    <div id="smb4" class="smb"><img class="sm-icons" src="assets/sm-icon4.png"><span class="smbt"><u>S</u>ettings</span></div>
+                    <div id="smb5" class="smb"><img class="sm-icons" src="assets/sm-icon5.png"><span class="smbt"><u>F</u>ind</span></div>
+                    <div id="smb6" class="smb"><img class="sm-icons" src="assets/sm-icon6.png"><span class="smbt"><u>H</u>elp</span></div>
+                    <div id="smb7" class="smb"><img class="sm-icons" src="assets/sm-icon7.png"><span class="smbt"><u>R</u>un</span></div>
+                    <div id="menudiv" class="pdivider border-rev"></div>
+                    <div id="smb8" class="smb"><img class="sm-icons" src="assets/sm-icon8.png"><span class="smbt"><u>L</u>og&nbsp;Off...</span></div>
+                    <div id="smb9" class="smb"><img class="sm-icons" src="assets/sm-icon9.png"><span class="smbt">Suspe<u>n</u>d</span></div>
+                    <div id="smb10" class="smb"><img class="sm-icons" src="assets/sm-icon10.png"><span class="smbt">Sh<u>u</u>t&nbsp;Down...</span></div>
+                </div>
+        </div>
         <header id="taskbar" class="border-reg">
-            <div id="start" class="border-reg">
+            <div id="start" class="default">
                 <img src="assets/starticonbig.png" alt="starticon" style="width: 30px; height: 140%; padding-right: 3px;">
                 Start
             </div>
             <div id="startdivider" class="divider border-rev"></div>
             <div id="startnub" class="border"></div>
-            <div id="tab1" class="focus">
+            <div id="tab0" class="unfocus">
                 <img class="icon" src="assets/paintlogo.png" alt="paintlogo">
                 untitled&nbsp;<b style="font-size: small;">-</b>&nbsp;Paint
             </div>
-            <div id="tab2" class="unfocus">
+            <div id="tab1" class="unfocus">
                 <img class="icon" src="assets/notepadiconsmall.png" alt="notepadiconsmall">
                 untitled&nbsp;<b style="font-size: small;">-</b>&nbsp;Notepad
             </div>
@@ -40,61 +57,9 @@
             <script src="time.js"></script>
         </header>
         <section id="windows">
-            <div id="notepad" class="border-window">
-                <div id="header-n" class="unfocused-header">
-                    <img class="header-icon" src="assets/notepadiconsmall.png" alt="notepadiconsmall">
-                    <span>untitled&nbsp;<b style="font-size: small;">-</b>&nbsp;Notepad</span>
-                    <div id="notepad-header-buttons">
-                        <div class="minbutton header-button"></div>
-                        <div class="winbutton header-button"></div>
-                        <div class="xbutton header-button"></div>
-                    </div>
-                </div>
-                <div id="notepad-options">
-                    <div><u>F</u>ile</div>
-                    <div><u>E</u>dit</div>
-                    <div><u>S</u>earch</div>
-                    <div><u>H</u>elp</div>
-                </div>
-                <div id="pad">
-                    Hello World!
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                    <p>hello world!</p>
-                </div>
-            </div>
             <div id="paint" class="border-window">
                 <div id="paintmain">
-                    <div id="header-p" class="focused-header">
+                    <div id="header0" class="unfocusH">
                         <img class="header-icon" src="assets/paintlogo.png" alt="paintlogomall">
                         <span>untitled&nbsp;<b style="font-size: small;">-</b>&nbsp;Paint</span>
                         <div id="paint-header-buttons">
@@ -104,12 +69,12 @@
                         </div>
                     </div>
                     <div id="paint-options">
-                        <div><u>F</u>ile</div>
-                        <div><u>E</u>dit</div>
-                        <div><u>V</u>iew</div>
-                        <div><u>I</u>mage</div>
-                        <div><u>O</u>ptions</div>
-                        <div><u>H</u>elp</div>
+                        <div class="op"><u>F</u>ile</div>
+                        <div class="op"><u>E</u>dit</div>
+                        <div class="op"><u>V</u>iew</div>
+                        <div class="op"><u>I</u>mage</div>
+                        <div class="op"><u>O</u>ptions</div>
+                        <div class="op"><u>H</u>elp</div>
                     </div>
                     <div id="painttoolbar">
                         <div id="pdivtop" class="pdivider border-rev"></div>
@@ -202,6 +167,58 @@
                             <div class="colorbox c28"></div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div id="notepad" class="border-window">
+                <div id="header1" class="unfocusH">
+                    <img class="header-icon" src="assets/notepadiconsmall.png" alt="notepadiconsmall">
+                    <span>untitled&nbsp;<b style="font-size: small;">-</b>&nbsp;Notepad</span>
+                    <div id="notepad-header-buttons">
+                        <div class="minbutton header-button"></div>
+                        <div class="winbutton header-button"></div>
+                        <div class="xbutton header-button"></div>
+                    </div>
+                </div>
+                <div id="notepad-options">
+                    <div class="op"><u>F</u>ile</div>
+                    <div class="op"><u>E</u>dit</div>
+                    <div class="op"><u>S</u>earch</div>
+                    <div class="op"><u>H</u>elp</div>
+                </div>
+                <div id="pad">
+                    Hello World!
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
+                    <p>hello world!</p>
                 </div>
             </div>
         </section>

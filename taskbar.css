@@ -9,7 +9,7 @@
     background-color: var(--color-window);
     border-left: hidden;
     height: 2.2rem;
-    display: flex;
+    display: none;
     align-items: center;
     outline-style: solid;
     outline-width: 2.5px;
@@ -20,7 +20,7 @@
     z-index: 100;
 }
 
-#taskbar #start{
+#start{
     height: var(--tab-height);
     max-height: var(--tab-height);
     display: inline-flex;
@@ -33,6 +33,14 @@
     letter-spacing: normal;
     flex-wrap: nowrap;
     overflow: clip;
+    cursor: default;
+}
+
+.default{
+    border-style: solid;
+    border-width: var(--border-width);
+    border-color: var(--color-border);
+    box-shadow: var(--shadow);
 }
 
 .divider{
@@ -60,6 +68,16 @@
     top: 1px;
 }
 
+#tab0, #tab1{
+    height: var(--tab-height);
+    display: none;
+    width: 11rem;
+    margin: 0.2rem;
+    padding: 0.3rem;
+    font-size: 0.80rem;
+    cursor: default;
+}
+
 .unfocus{
     height: var(--tab-height);
     width: 11rem;
@@ -79,16 +97,11 @@
 }
 
 .focus, .mouse-down{
-    height: var(--tab-height);
-    width: 11rem;
     display: inline-flex;
     flex-wrap: nowrap;
     overflow: clip;
     justify-content: left;
     align-items: center;
-    margin: 0.2rem;
-    padding: 0.3rem;
-    font-size: 0.80rem;
     border-style: solid;
     border-width: var(--border-width);
     border-color: var(--color-border-inline);
@@ -98,10 +111,6 @@
 .mouse-down{
     font-weight: normal;
     background-color: var(--color-window);
-}
-
-#tab1, #tab2{
-    cursor: default;
 }
 
 .focus{
@@ -146,3 +155,84 @@
     right: 4px;
 }
 
+#startmenu{
+    position: absolute;
+    left: 4px;
+    bottom: 40px;
+    display: none;
+    z-index: 1000;
+    background-color: var(--color-window);
+    height: 60%;
+    width: 15%;
+}
+#startmenulogo{
+    position: relative;
+    z-index: 1050;
+    left: 0.12vw;
+    top: 0.12vw;
+    height: calc(100% - 0.25vw);
+    width: 15%;
+    background-color: #808080;
+    background-image: url("assets/mspaintz-startmenu-vert.png");
+    background-size: 70% 38%;
+    background-repeat: no-repeat;
+    background-position: 0.30vw 19vw;
+}
+#startmenubuttons{
+    z-index: 1025;
+    position: relative;
+    font-size: 1vw;
+    left: 0.125vw;
+    top: 0.1vw;
+    justify-content: center;
+    display: inline-flex;
+    flex-direction: column;
+    height: calc(100% - 0.20vw);
+    width: 84%;
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 0.1fr, 1fr, 1fr, 1fr;
+}
+
+#menudiv{
+    display: block;
+    position: absolute;
+    z-index: 1010;
+    left: 0.1vw;
+    bottom: 9.5vw;
+    width: calc(100% - 0.25vw);
+}
+
+.smb{
+    display: inline;
+    text-align: left;
+    line-height: 0px;
+    height: 10%;
+}
+
+.smb:hover{
+    background-color: var(--color-header-f);
+    color: var(--color-border-l);
+    cursor: default;
+}
+
+.sm-icons{
+    position: relative;
+    top: 0.50vw;
+    left: 0.80vw;
+    margin-right: 1.5vw;
+    height: 2.1vw;
+    width: 16%;
+}
+
+#smb7, #smb8{
+    flex-basis:11%;
+}
+
+#smb7 > .smbt, #smb8 > .smbt{
+    position: relative;
+    bottom: 0.12vw;
+}
+
+.smbt{
+    position: relative;
+    bottom: 0.25vw;
+}
